@@ -37,6 +37,9 @@ public class main {
                     System.out.print("Ingrese el codigo: ");
                     rent(scan.nextInt());
                     break;
+                case 3:
+                    System.out.println("Ingrese el codigo");
+                    submenu(scan.nextInt());
             }
         }while(opt!=5);
     }
@@ -65,4 +68,27 @@ public class main {
         if(!exist)System.out.println("Item no Existe!");
         
     }
+    
+    private static void submenu(int cod) {
+        boolean existe = false;
+        for (RentItem item : items) {
+            if (item.getCode() == cod) {
+                if (item instanceof MenuActions) {
+                    ((MenuActions)item).submenu();
+                    System.out.println("Escoja Opcion");
+                    ((MenuActions)item).ejecutarOpcion(scan.nextInt());
+                }
+                existe = true;
+            }
+        }
+        
+    }
+    
+    private static void print(){
+        for (RentItem rentItem : items) {
+            System.out.println(rentItem.toString());
+        }
+    }
+    
+    
 }

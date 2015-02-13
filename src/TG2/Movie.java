@@ -19,7 +19,7 @@ public class Movie extends RentItem {
     public Movie(int c, String n, double p){
         super(c, n, p);
         fecha = Calendar.getInstance();
-        fecha.getTime().toString();
+        fecha.getTime();
         
     }
 
