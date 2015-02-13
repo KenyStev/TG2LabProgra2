@@ -33,6 +33,10 @@ public class main {
                     System.out.print("Ingrese el codigo, nombre y tipo(PS3/MOVIE) separado por espacios");
                     addItem(scan.nextInt(), scan.next(), scan.next());
                     break;
+                case 2:
+                    System.out.print("Ingrese el codigo: ");
+                    rent(scan.nextInt());
+                    break;
             }
         }while(opt!=5);
     }
@@ -45,6 +49,14 @@ public class main {
             case "ps3":
                 items.add(new PS3Game(code, name));
                 break;
+        }
+    }
+
+    private static void rent(int code) {
+        for (RentItem item : items) {
+            if(item.getCode()==code){
+                
+            }
         }
     }
 }
