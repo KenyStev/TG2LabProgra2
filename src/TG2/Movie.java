@@ -35,7 +35,7 @@ public class Movie extends RentItem {
     
     @Override
     public String toString(){
-        return super.toString() + getEstado() + " - Movie"; 
+        return super.toString() +", "+ getEstado() + " - Movie"; 
     }
     
     public String getEstado(){

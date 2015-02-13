@@ -29,7 +29,7 @@ public class PS3Game extends RentItem implements MenuActions{
 
     @Override
     public String toString() {
-        return "PS3Game{" + super.toString() + " fechaPublicacion=" + fechaPublicacion + '}';
+        return "PS3Game{" + super.toString() + " fechaPublicacion=" + fechaPublicacion.getTime() + '}';
     }
 
     @Override
