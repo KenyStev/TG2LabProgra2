@@ -44,7 +44,8 @@ public class main {
     static void addItem(int code, String name, String tipo){
         switch(tipo.toLowerCase()){
             case "movie":
-                
+                System.out.print("Ingrese el Precio: ");
+                items.add(new Movie(code, name, scan.nextDouble()));
                 break;
             case "ps3":
                 items.add(new PS3Game(code, name));
