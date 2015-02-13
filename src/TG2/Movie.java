@@ -40,13 +40,12 @@ public class Movie extends RentItem {
     
     public String getEstado(){
         Calendar now = Calendar.getInstance();
-        now.getTime();
-        if (fecha.get(Calendar.MONTH) < now.get(Calendar.MONTH)) {
+        now.add(Calendar.MONTH, -3);
+        
+        if(fecha.compareTo(now)>=0){
             return "ESTRENO";
         }
         return "NORMAL";
     }
-    
-    
     
 }
