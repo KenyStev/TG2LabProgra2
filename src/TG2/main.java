@@ -54,10 +54,15 @@ public class main {
     }
 
     private static void rent(int code) {
+        boolean exist=false;
         for (RentItem item : items) {
             if(item.getCode()==code){
-                
+                System.out.print("Dias a Rentar: ");
+                System.out.println("Total a Pagar: "+item.pagoRenta(scan.nextInt()));
+                exist=true;
             }
         }
+        if(!exist)System.out.println("Item no Existe!");
+        
     }
 }
