@@ -24,8 +24,13 @@ public class Movie extends RentItem {
     }
 
     @Override
-    protected double pagoRenta(int días) {
-        
+    protected double pagoRenta(int dias) {
+        if (getEstado().equals("ESTRENO") && dias > 2) {
+            return precio + 50*dias; 
+        } else if (getEstado().equals("NORMAL") && dias > 5) {
+            return precio + 30*dias;
+        }
+        return precio;
     }
     
     @Override
